@@ -1,4 +1,4 @@
-class_name Constants extends Object
+class_name Enums extends Object
 
 enum PuzzleScreen
 {

@@ -4,7 +4,7 @@ class_name PuzzleSelect extends Control
 @onready var puzzle_type_select: PuzzleTypeSelect = $"Puzzle Type Select"
 @onready var puzzle_mode_select: PuzzleModeSelect = $"Puzzle Mode Select"
 
-var screen_type:Constants.PuzzleSelection = Constants.PuzzleSelection.PUZZLE_DIFFICULTY
+var screen_type:Enums.PuzzleScreen = Enums.PuzzleScreen.PUZZLE_DIFFICULTY
 
 const PUZZLE_SCENE:String = ""
 const MAIN_MENU_SCENE:String = ""
@@ -14,14 +14,14 @@ func _ready() -> void:
 	puzzle_type_select.on_puzzle_type_selected.connect(_on_puzzle_type_selected)
 	puzzle_mode_select.on_puzzle_mode_selected.connect(_on_puzzle_mode_selected)
 	
-	difficulty_select.visible = screen_type == Constants.PuzzleSelection.PUZZLE_DIFFICULTY
-	puzzle_type_select.visible = screen_type == Constants.PuzzleSelection.PUZZLE_TYPE
-	puzzle_mode_select.visible = screen_type == Constants.PuzzleSelection.PUZZLE_MODE
+	difficulty_select.visible = screen_type == Enums.PuzzleScreen.PUZZLE_DIFFICULTY
+	puzzle_type_select.visible = screen_type == Enums.PuzzleScreen.PUZZLE_TYPE
+	puzzle_mode_select.visible = screen_type == Enums.PuzzleScreen.PUZZLE_MODE
 	
 	pass
 
 func _on_back_button_pressed() -> void:
-	#var _prev_screen_type:Constants.PuzzleSelection = screen_type - 1
+	#var _prev_screen_type:Enums.PuzzleScreen = screen_type - 1
 	
 	if false:
 		pass
