@@ -1,0 +1,236 @@
+[gd_scene load_steps=7 format=3 uid="uid://wr2ne1wk5lvy"]
+
+[ext_resource type="Script" path="res://Scripts/UI/PuzzleSelect.gd" id="1_u2k31"]
+[ext_resource type="Theme" uid="uid://fueuj04otajf" path="res://Assets/Themes/ui_theme.tres" id="2_w0s5e"]
+[ext_resource type="Script" path="res://scripts/UI/DifficultySelect.gd" id="3_w1tw3"]
+[ext_resource type="Script" path="res://Scripts/UI/PuzzleTypeSelect.gd" id="4_5dwtf"]
+[ext_resource type="Script" path="res://Scripts/UI/PuzzleModeSelect.gd" id="5_4torm"]
+[ext_resource type="PackedScene" uid="uid://be8vki2sjj3mw" path="res://Scenes/generic_button.tscn" id="6_557js"]
+
+[node name="PuzzleSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u2k31")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_w0s5e")
+
+[node name="Difficulty Select" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_w1tw3")
+
+[node name="Difficulty Label" type="Label" parent="Difficulty Select"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -209.0
+offset_right = 209.0
+offset_bottom = 132.0
+grow_horizontal = 2
+theme = ExtResource("2_w0s5e")
+text = "Difficulty"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Difficulty Select"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -360.0
+offset_top = -588.0
+offset_right = 360.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_w0s5e")
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="LearningButton" type="Button" parent="Difficulty Select/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 9
+theme = ExtResource("2_w0s5e")
+text = "Learning"
+
+[node name="EasyButton" type="Button" parent="Difficulty Select/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 9
+theme = ExtResource("2_w0s5e")
+text = "Easy"
+
+[node name="MediumButton" type="Button" parent="Difficulty Select/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 9
+theme = ExtResource("2_w0s5e")
+text = "Medium"
+
+[node name="HardButton" type="Button" parent="Difficulty Select/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 9
+theme = ExtResource("2_w0s5e")
+text = "Hard"
+
+[node name="UltimateButton" type="Button" parent="Difficulty Select/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 9
+theme = ExtResource("2_w0s5e")
+text = "Ultimate"
+
+[node name="13thHourButton" type="Button" parent="Difficulty Select/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 9
+theme = ExtResource("2_w0s5e")
+text = "The 13th Hour"
+
+[node name="Puzzle Type Select" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_5dwtf")
+
+[node name="Puzzle Type Label" type="Label" parent="Puzzle Type Select"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 132.0
+grow_horizontal = 2
+theme = ExtResource("2_w0s5e")
+text = "Puzzle Type"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Puzzle Type Select"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -360.0
+offset_top = -588.0
+offset_right = 360.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_w0s5e")
+alignment = 1
+
+[node name="NormalButton" type="Button" parent="Puzzle Type Select/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 9
+theme = ExtResource("2_w0s5e")
+text = "Normal Puzzle"
+
+[node name="DoubleButton" type="Button" parent="Puzzle Type Select/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 9
+theme = ExtResource("2_w0s5e")
+text = "Double Puzzle"
+
+[node name="RecursiveButton" type="Button" parent="Puzzle Type Select/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 9
+theme = ExtResource("2_w0s5e")
+text = "Recursive Puzzle"
+
+[node name="DoubleRecursiveButton" type="Button" parent="Puzzle Type Select/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 9
+theme = ExtResource("2_w0s5e")
+text = "Double Recursive Puzzle"
+
+[node name="Puzzle Mode Select" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_4torm")
+
+[node name="Puzzle Mode Label" type="Label" parent="Puzzle Mode Select"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -22.0
+offset_right = 22.0
+offset_bottom = 132.0
+grow_horizontal = 2
+theme = ExtResource("2_w0s5e")
+text = "Puzzle Mode"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Puzzle Mode Select"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -360.0
+offset_top = -588.0
+offset_right = 360.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_w0s5e")
+alignment = 1
+
+[node name="RotatingButton" type="Button" parent="Puzzle Mode Select/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 9
+theme = ExtResource("2_w0s5e")
+text = "Shifting Hours"
+
+[node name="TimeButton" parent="Puzzle Mode Select/VBoxContainer" instance=ExtResource("6_557js")]
+layout_mode = 2
+
+[node name="BackButton" parent="." instance=ExtResource("6_557js")]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 130.0
+offset_bottom = 90.0
+text = "Back
+"
+
+[connection signal="pressed" from="Difficulty Select/VBoxContainer/LearningButton" to="Difficulty Select" method="_on_learning_button_pressed"]
+[connection signal="pressed" from="Difficulty Select/VBoxContainer/EasyButton" to="Difficulty Select" method="_on_easy_button_pressed"]
+[connection signal="pressed" from="Difficulty Select/VBoxContainer/MediumButton" to="Difficulty Select" method="_on_medium_button_pressed"]
+[connection signal="pressed" from="Difficulty Select/VBoxContainer/HardButton" to="Difficulty Select" method="_on_hard_button_pressed"]
+[connection signal="pressed" from="Difficulty Select/VBoxContainer/UltimateButton" to="Difficulty Select" method="_on_ultimate_button_pressed"]
+[connection signal="pressed" from="Difficulty Select/VBoxContainer/13thHourButton" to="Difficulty Select" method="_on_13_hour_button_pressed"]
+[connection signal="pressed" from="Puzzle Type Select/VBoxContainer/NormalButton" to="Puzzle Type Select" method="_on_normal_button_pressed"]
+[connection signal="pressed" from="Puzzle Type Select/VBoxContainer/DoubleButton" to="Puzzle Type Select" method="_on_double_button_pressed"]
+[connection signal="pressed" from="Puzzle Type Select/VBoxContainer/RecursiveButton" to="Puzzle Type Select" method="_on_recursive_button_pressed"]
+[connection signal="pressed" from="Puzzle Type Select/VBoxContainer/DoubleRecursiveButton" to="Puzzle Type Select" method="_on_double_recursive_button_pressed"]
+[connection signal="pressed" from="Puzzle Mode Select/VBoxContainer/RotatingButton" to="Puzzle Mode Select" method="_on_rotating_button_pressed"]
+[connection signal="pressed" from="Puzzle Mode Select/VBoxContainer/TimeButton" to="Puzzle Mode Select" method="_on_time_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
