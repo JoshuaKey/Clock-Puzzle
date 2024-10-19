@@ -1,0 +1,59 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://fueuj04otajf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u36rq"]
+bg_color = Color(0.617455, 0.617455, 0.617455, 0.384314)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wr452"]
+bg_color = Color(0.823529, 0.823529, 0.823529, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a3k0c"]
+bg_color = Color(0.821789, 0.821789, 0.821788, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bsd37"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f25g2"]
+bg_color = Color(0.513233, 0.513233, 0.513233, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a4tdq"]
+bg_color = Color(0.39582, 0.702059, 0.748137, 1)
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_disabled_color = Color(0, 0, 0, 0.5)
+Button/colors/font_focus_color = Color(0.247059, 0.247059, 0.247059, 1)
+Button/colors/font_hover_color = Color(0.248399, 0.248401, 0.248401, 1)
+Button/colors/font_hover_pressed_color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0.099986, 0.099986, 0.099986, 1)
+Button/font_sizes/font_size = 48
+Button/styles/disabled = SubResource("StyleBoxFlat_u36rq")
+Button/styles/focus = SubResource("StyleBoxFlat_wr452")
+Button/styles/hover = SubResource("StyleBoxFlat_a3k0c")
+Button/styles/normal = SubResource("StyleBoxFlat_bsd37")
+Button/styles/pressed = SubResource("StyleBoxFlat_f25g2")
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 96
+Panel/styles/panel = SubResource("StyleBoxFlat_a4tdq")
+VBoxContainer/constants/separation = 30
