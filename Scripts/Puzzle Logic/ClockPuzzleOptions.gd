@@ -8,6 +8,9 @@ var clock_size:int = 6
 var hour_minimum:int = 1
 var hour_maximum:int = 6
 
+## The seed of the Random Number Generator
+var puzzle_seed:int = 0
+
 # TODO: Distribution of Hours ???
 
 ## Ensure the data for Puzzle Creation is valid
@@ -17,7 +20,6 @@ func validate() -> void:
 		clock_size = 4
 	
 	# Maximum Hour Value must be less than Clock Size
-	# NOTE: Clock Size / 2???
 	if hour_maximum >= clock_size:
 		hour_maximum = clock_size - 1
 	

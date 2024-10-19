@@ -16,8 +16,8 @@ var _second_hour_index:int = -1
 static func generate_puzzle(options:ClockPuzzleOptions) -> ClockPuzzle:
 	# Create Random Number Generator
 	var rand:RandomNumberGenerator = RandomNumberGenerator.new()
-	rand.seed = 5
-	rand.randomize()
+	if options.puzzle_seed != 0:
+		rand.seed = options.puzzle_seed
 	
 	# Ensure valid Options
 	options.validate()
@@ -42,6 +42,19 @@ static func create_puzzle(clock:Array[int]) -> ClockPuzzle:
 		puzzle._clock.append(hour)
 		
 	return puzzle
+
+## Clones an existing puzzle
+static func clone_puzzle(original_puzzle:ClockPuzzle) -> ClockPuzzle:
+	var cloned_puzzle:ClockPuzzle = ClockPuzzle.new()
+	
+	for original_hour:Hour in original_puzzle._clock:
+		var clone_hour:Hour = Hour.new(original_hour.get_value())
+		clone_hour._active = original_hour.is_active()
+		cloned_puzzle._clock.append(clone_hour)
+	
+	cloned_puzzle._first_hour_index = original_puzzle._first_hour_index
+	cloned_puzzle._second_hour_index = original_puzzle._second_hour_index
+	return cloned_puzzle
 
 ## Resets the Clock Puzzle
 func reset() -> void:
@@ -73,6 +86,12 @@ func is_puzzle_failed() -> bool:
 			not _clock[_first_hour_index].is_active() and \
 			not _clock[_second_hour_index].is_active() and \
 			not is_puzzle_completed()
+
+func is_hour_selectable(index:int) -> bool:
+	if index < 0 or index >= _clock.size():
+		push_error("ERROR: Attempting to access invalid element")
+		return false
+	return _clock[index].is_active()
 
 ## Chooses an Hour to progress the Puzzle
 ##
@@ -155,3 +174,42 @@ class Hour:
 	
 	func is_active() -> bool:
 		return self._active
+
+## I had a really bad idea...
+class ClockPuzzleSolver:
+	var _original_puzzle:ClockPuzzle
+	
+	func check_is_solvable(puzzle:ClockPuzzle, choice_array:Array = Array()) -> bool:
+		_original_puzzle = puzzle
+		
+		# Check if the Puzzle is already completed
+		if _original_puzzle.is_puzzle_completed():
+			return true
+		
+		# Check if the Puzzle is already failed
+		if _original_puzzle.is_puzzle_failed():
+			return false
+		
+		# Recursively iterate over all possible choices for the given puzzle
+		# Clone the puzzle
+		# Make a move on it
+		# Repeat until puzzle is solved or failed
+		var is_solvable:bool = false
+		var possible_choices:Array[int] = _original_puzzle.get_selectable_hours()
+		for choice:int in possible_choices:
+			if not _original_puzzle.is_hour_selectable(choice):
+				continue
+			
+			var cloned_puzzle:ClockPuzzle = ClockPuzzle.clone_puzzle(_original_puzzle)
+			cloned_puzzle.choose_hour(choice)
+			
+			choice_array.push_back(choice)
+			
+			var cloned_puzzle_solver:ClockPuzzleSolver = ClockPuzzleSolver.new()
+			is_solvable = is_solvable or cloned_puzzle_solver.check_is_solvable(cloned_puzzle, choice_array)
+			if is_solvable:
+				break
+			
+			choice_array.pop_back()
+		
+		return is_solvable
