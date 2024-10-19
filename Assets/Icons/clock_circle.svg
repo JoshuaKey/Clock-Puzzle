@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512.0011"
+   height="512.0011"
+   viewBox="0 0 512.0011 512.0011"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="circle_puzzle.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="true"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     inkscape:zoom="0.78305976"
+     inkscape:cx="606.59482"
+     inkscape:cy="386.30512"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-383.99945,-99.999451)">
+    <path
+       id="path1"
+       style="fill:#f9f9f9;stroke:#ffffff;stroke-width:1.005;stroke-linejoin:bevel;stroke-miterlimit:5;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       d="M 640,100.50195 A 255.49731,255.49731 0 0 0 384.50195,356 255.49731,255.49731 0 0 0 640,611.49805 255.49731,255.49731 0 0 0 895.49805,356 255.49731,255.49731 0 0 0 640,100.50195 Z m 0,1.36719 A 254.13071,254.13071 0 0 1 894.13086,356 254.13071,254.13071 0 0 1 640,610.13086 254.13071,254.13071 0 0 1 385.86914,356 254.13071,254.13071 0 0 1 640,101.86914 Z"
+       inkscape:label="Outer Circle" />
+    <path
+       id="path3"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.656821;stroke-linejoin:bevel;stroke-miterlimit:5;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       d="M 640,228.32812 A 127.67159,127.67159 0 0 0 512.32812,356 127.67159,127.67159 0 0 0 640,483.67188 127.67159,127.67159 0 0 0 767.67188,356 127.67159,127.67159 0 0 0 640,228.32812 Z m 0,1.10547 A 126.56627,126.56626 0 0 1 766.56641,356 126.56627,126.56626 0 0 1 640,482.56641 126.56627,126.56626 0 0 1 513.43359,356 126.56627,126.56626 0 0 1 640,229.43359 Z"
+       inkscape:label="Inner Circle"
+       inkscape:export-filename="..\Godot\Clock Puzzle\assets\clock_circle.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>
