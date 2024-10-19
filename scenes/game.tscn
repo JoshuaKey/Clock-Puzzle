@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://6isu08jqudfp"]
-
-[ext_resource type="PackedScene" uid="uid://dbfd0axa5dyvr" path="res://scenes/clock_puzzle.tscn" id="2_7xjnw"]
-
-[node name="Game" type="Node2D"]
-
-[node name="ClockPuzzle" parent="." instance=ExtResource("2_7xjnw")]
-
-[node name="Camera2D" type="Camera2D" parent="."]

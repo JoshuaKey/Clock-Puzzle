@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://dbfd0axa5dyvr"]
+
+[ext_resource type="PackedScene" uid="uid://bagb65y2koxab" path="res://Scenes/Clock Scenes/hour.tscn" id="1_16ycj"]
+[ext_resource type="Script" path="res://Scripts/ClockPuzzleScene.gd" id="1_w41x5"]
+[ext_resource type="Texture2D" uid="uid://djl2vavv3r15q" path="res://Assets/Icons/clock_circle.svg" id="2_6bmpo"]
+[ext_resource type="PackedScene" uid="uid://bdy1jmqiaf4fk" path="res://Scenes/Clock Scenes/clock_hand.tscn" id="4_68pjr"]
+[ext_resource type="Script" path="res://Scripts/ClockHand.gd" id="5_l7no6"]
+
+[node name="ClockPuzzle" type="Node2D" node_paths=PackedStringArray("clock_hand_1", "clock_hand_2")]
+script = ExtResource("1_w41x5")
+clock_hand_1_random_rotation_speed = null
+clock_hand_2_random_rotation_speed = null
+clock_hand_rotation_speed = null
+clock_hand_pause_time = null
+clock_hand_tick_degree = 15
+clock_hand_tick_time = null
+clock_hand_maximum_speed = null
+clock_hand_time_to_max_speed = null
+clock_hand_1 = NodePath("ClockHand1")
+clock_hand_2 = NodePath("ClockHand2")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("2_6bmpo")
+
+[node name="Hour" parent="." instance=ExtResource("1_16ycj")]
+position = Vector2(0, -194)
+
+[node name="Hour2" parent="." instance=ExtResource("1_16ycj")]
+position = Vector2(194, 0)
+
+[node name="Hour3" parent="." instance=ExtResource("1_16ycj")]
+position = Vector2(0, 194)
+
+[node name="Hour4" parent="." instance=ExtResource("1_16ycj")]
+position = Vector2(-194, 0)
+
+[node name="ClockHand1" parent="." instance=ExtResource("4_68pjr")]
+script = ExtResource("5_l7no6")
+
+[node name="ClockHand2" parent="." instance=ExtResource("4_68pjr")]
+script = ExtResource("5_l7no6")

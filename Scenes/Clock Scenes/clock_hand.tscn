@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdy1jmqiaf4fk"]
+
+[ext_resource type="Texture2D" uid="uid://bjeiwi20n0u3u" path="res://Assets/Icons/clock_hand.svg" id="1_0c6i5"]
+
+[node name="ClockHand" type="Node2D"]
+
+[node name="ClockHandSprite" type="Sprite2D" parent="."]
+rotation = -3.14159
+texture = ExtResource("1_0c6i5")
+offset = Vector2(0, 54)

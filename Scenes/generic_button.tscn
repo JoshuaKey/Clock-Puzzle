@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://be8vki2sjj3mw"]
+
+[ext_resource type="Theme" uid="uid://fueuj04otajf" path="res://Assets/Themes/ui_theme.tres" id="1_4dpty"]
+
+[node name="Button" type="Button"]
+size_flags_vertical = 9
+theme = ExtResource("1_4dpty")
+text = "Button"
