@@ -21,7 +21,7 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bsd37"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_etikh"]
 bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
@@ -50,10 +50,14 @@ Button/font_sizes/font_size = 48
 Button/styles/disabled = SubResource("StyleBoxFlat_u36rq")
 Button/styles/focus = SubResource("StyleBoxFlat_wr452")
 Button/styles/hover = SubResource("StyleBoxFlat_a3k0c")
-Button/styles/normal = SubResource("StyleBoxFlat_bsd37")
+Button/styles/normal = SubResource("StyleBoxFlat_etikh")
 Button/styles/pressed = SubResource("StyleBoxFlat_f25g2")
 Label/colors/font_color = Color(0, 0, 0, 1)
 Label/colors/font_outline_color = Color(0, 0, 0, 1)
-Label/font_sizes/font_size = 96
+Label/font_sizes/font_size = 48
 Panel/styles/panel = SubResource("StyleBoxFlat_a4tdq")
+TitleLabel/base_type = &"Label"
+TitleLabel/colors/font_color = Color(0, 0, 0, 1)
+TitleLabel/colors/font_outline_color = Color(0, 0, 0, 1)
+TitleLabel/font_sizes/font_size = 96
 VBoxContainer/constants/separation = 30

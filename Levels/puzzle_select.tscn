@@ -14,6 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_w0s5e")
 script = ExtResource("1_u2k31")
 
 [node name="Background" type="Panel" parent="."]
@@ -26,7 +27,6 @@ grow_vertical = 2
 theme = ExtResource("2_w0s5e")
 
 [node name="Difficulty Select" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -45,6 +45,7 @@ offset_right = 209.0
 offset_bottom = 132.0
 grow_horizontal = 2
 theme = ExtResource("2_w0s5e")
+theme_type_variation = &"TitleLabel"
 text = "Difficulty"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -121,6 +122,7 @@ offset_right = 20.0
 offset_bottom = 132.0
 grow_horizontal = 2
 theme = ExtResource("2_w0s5e")
+theme_type_variation = &"TitleLabel"
 text = "Puzzle Type"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -184,6 +186,7 @@ offset_right = 22.0
 offset_bottom = 132.0
 grow_horizontal = 2
 theme = ExtResource("2_w0s5e")
+theme_type_variation = &"TitleLabel"
 text = "Puzzle Mode"
 horizontal_alignment = 1
 vertical_alignment = 1
